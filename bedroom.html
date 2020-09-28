@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" >
+		<title> Sandy and Leslie's apartment </title>
+		<link rel="stylesheet" type="text/css" href="css/apartmentstyle.css">
+		<link rel="stylesheet" type="text/css" href="css/apartment.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+		<style>
+			*{
+			margin: 0;
+			padding: 0;
+		}
+		.main h2{
+			text-align: center;
+			background-color: lightblue;
+			color: blue;
+
+		}
+		main img{
+			margin-left: 25em;
+			padding: 10px;
+
+		}
+		.table{
+				border: 1px solid black;
+				border-collapse: collapse;
+				padding-bottom: 5px;
+				padding: 10px;
+			}
+			.table, th, td{
+				border: 1px solid black;
+				padding: 7px;
+			}
+			.thead{
+				background-color: lightgray;
+				padding: 5px;
+
+			}
+			.tfoot{
+				background-color: lightyellow;
+			}
+			.footer{
+				padding: 5px;
+			}
+			.apartment h2{
+			text-align: left;
+			background-color: lightblue;
+			color: blue;
+
+			}
+		
+		</style>
+	</head>
+	<body>
+		<header class="a">
+				<h1> Sandy and Leslie's Apartment </h1>
+				<br>
+				<p> Click a room for a detailed view. </p>
+				<br>
+				<img class="img" src="img/apartmentfloorplan.jpg" alt="floor plan of apartment" usemap="#image-map">
+				<map name="image-map">
+					<area  href="bedroom.html" coords="179,2,48,145" shape="rect" title="bedroom1">
+					<area  href="bedroom.html" coords="200,3,353,146" shape="rect" title="bedroom2">
+					<area  href="diningroom.html" coords="413,143,48" shape="circle" title="diningroom">
+					<area  href="kitchen.html" coords="248,214,410,396" shape="rect" title="kitchen">
+					<area  href="livingroom.html" coords="419,205,473,176,524,184,534,377,418,392" shape="poly" title="livingroom">
+				</map>
+			</header>
+			<nav class="nav">
+				<p><a href="apartment.html" >Apartment</a>
+				<b>|</b><a href="bedroom.html" >Bedroom 1</a>
+				<b>|</b><a href="bedroom.html" >Bedroom 2</a>
+				<b>|</b><a href="diningroom.html" >Dining Room</a>
+				<b>|</b><a href="kitchen.html" >Kitchen </a>
+				<b>|</b><a href="livingroom.html" > Living Room</a></p>
+			</nav>
+			<main>
+				<div class="main">
+					<h2> Bed Room </h2>
+				</div>
+				<img src="thumbnail/bedroom_sm.jpg" height="450" width="650">
+			<div class="apartment">
+						<h2> Apartment Services: </h2>
+						<br>
+						<table class="table" cellpadding="10">
+							<thead class="thead">
+								<tr>
+									<th> Service </th>
+									<th> Day/Hours </th>
+								</tr>
+							</thead>
+							<tbody class="tbody">
+								<tr>
+									<td> Gym </td>
+									<td colspan="2" rowspan="2"> Monday-Friday 6am-10pm
+										Saturday 8am - 8pm
+										Sunday 8am - 5pm
+										</td>
+								</tr>
+								<tr>
+									<td> Pool </td>
+								</tr>
+								<tr>
+									<td> Laundry </td>
+									<td> 24/7 </td>
+								</tr>
+							</tbody>
+							<tfoot class="tfoot">
+								<tr>
+									<td colspan="2"> Please do not allow people you do not know to use these facilities </td>
+
+								</tr>
+							</tfoot>
+						</table>
+						<br>
+						<ol>
+							<li>Bedroom 1 </li>
+							<li> Bedroom 2 </li>
+						</ol>
+						<br>
+					</div>
+			</main>
+			<br>
+			<footer>
+				<div class="footer">
+					<caption> For more information contact: <a href="https://mailto:apartment@example.com/">SandyAndLeslie@example.com</a></caption>
+					<br>
+					<br>
+					<p> © Sandy and Leslie 2020 </p>
+				</div>
+			</footer>
+	</body>
+</html>

@@ -1,0 +1,41 @@
+*{
+	padding:0;
+	margin: 0;
+}
+@media only screen and (max-width: 600px){
+
+nav a{
+	display: block;
+	padding-left: 10px;
+	list-style-type: none;
+}
+				
+.main{
+	display: grid;
+	grid-template-areas: 'survey'
+						 'media'
+						 'apartment'
+						 'location';
+	grid-gap: 5px;
+}
+.survey{
+	grid-area: survey;
+}
+.location{
+	grid-area: location;
+}
+.media{
+	grid-area: media;
+}
+.apartment{
+	grid-area: apartment;
+}
+					
+.img{
+	display: none;
+}
+.flex{
+	width: 100%;
+	display: inline-block;
+}
+}

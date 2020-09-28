@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" >
+		<title> Sandy and Leslie's apartment </title>
+		<link rel="stylesheet" type="text/css" href="css/apartmentstyle.css">
+		<link rel="stylesheet" type="text/css" href="css2/mobile.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+		<style>
+			*{
+				margin:0;
+				padding:0;
+			}
+			.form{
+				padding: 10px;
+			}
+			.table{
+				border: 1px solid black;
+				border-collapse: collapse;
+				padding-bottom: 5px;
+				padding: 10px;
+			}
+			.table, th, td{
+				border: 1px solid black;
+				padding: 7px;
+			}
+			.thead{
+				background-color: lightgray;
+				padding: 5px;
+				
+			}
+			.tfoot{
+				background-color: lightyellow;
+			}
+			.mp{
+				background-color: black;
+			}
+			.main{
+				display: flex;
+				display: grid;
+				grid-template-areas:" survey survey apartment location"
+									"welcome welcome apartment location";
+				grid-gap: 10px;
+			}
+			.survey{
+				grid-area: survey;
+				padding: 10px;
+			}
+			.apartment{
+				grid-area:apartment;
+				padding: 10px;
+			}
+			.location{
+				grid-area: location;
+				padding: 10px;
+			}
+			.welcome{
+				grid-area: welcome;
+				padding: 10px;
+			}
+			.gallery{
+				background-color: lightblue;
+				color: blue;
+				padding: 5px;
+			}
+			.flex{
+				display: flex;
+				flex-direction: row;
+				justify-content: space-between;
+				padding: 10px;
+			}
+			.flex h2{
+				background-color: gray;
+				color: white;
+			}
+			.cell{
+				padding: 25px;
+			}
+			.main h2{
+				background-color: lightblue;
+				color: blue;
+			}
+			.footer{
+				text-align: center;
+			}
+			@media only screen and (max-width: 600px){
+				
+				nav a{
+					display: block;
+					padding-left: 10px;
+					list-style-type: none;
+					
+				}
+				
+				.main{
+					display: grid;
+					grid-template-areas: 'survey'
+										 'media'
+										 'apartment'
+										 'location';
+					grid-gap: 5px;
+				}
+				.survey{
+					grid-area: survey;
+				}
+				.location{
+					grid-area: location;
+				}
+				.media{
+					grid-area: media;
+				}
+				.apartment{
+					grid-area: apartment;
+				}
+					
+				.img{
+					display: none;
+				}
+				.flex{
+					width: 100%;
+					display: inline-block;
+				}
+				.flex h2{
+					width: 50%;
+				}
+				}
+				
+			
+		</style>
+	</head>
+		<body>
+			<header class="a">
+				<h1> Sandy and Leslie's Apartment </h1>
+				<br>
+				<p> Click a room for a detailed view. </p>
+				<br>
+				<img class="img" src="img/apartmentfloorplan.jpg" alt="floor plan of apartment" usemap="#image-map">
+				<map name="image-map">
+					<area  href="bedroom.html" coords="179,2,48,145" shape="rect" title="bedroom1">
+					<area  href="bedroom.html" coords="200,3,353,146" shape="rect" title="bedroom2">
+					<area  href="diningroom.html" coords="413,143,48" shape="circle" title="diningroom">
+					<area  href="kitchen.html" coords="248,214,410,396" shape="rect" title="kitchen">
+					<area  href="livingroom.html" coords="419,205,473,176,524,184,534,377,418,392" shape="poly" title="livingroom">
+				</map>
+			</header>
+			<nav class="nav">
+				<p><a href="apartment.html" >Apartment</a>
+				<a href="bedroom.html" >Bedroom 1</a>
+				<a href="bedroom.html" >Bedroom 2</a>
+				<a href="diningroom.html" >Dining Room</a>
+				<a href="kitchen.html" >Kitchen </a>
+				<a href="livingroom.html" > Living Room</a></p>
+			</nav>
+			<main>
+				<div class="main">
+					<div class="survey">
+						<h2> Survey </h2>
+						<form class="form">
+							<p>How did you find out about this apartment? Check any that apply:</p>
+							<br>
+							<input  type="checkbox" value="Web search" > Web search
+							<input  type="checkbox" value="Friend" > Friend
+							<input type="checkbox" value="Newspaper" > Newspaper<br>
+							<br>
+							<input type="submit" value="submit">
+							<input type="reset" value="Reset Form">
+						</form>
+					</div>
+					<div class="apartment">
+						<h2> Apartment Services: </h2>
+						<br>
+						<table class="table" cellpadding="10">
+							<thead class="thead">
+								<tr>
+									<th> Service </th>
+									<th> Day/Hours </th>
+								</tr>
+							</thead>
+							<tbody class="tbody">
+								<tr>
+									<td> Gym </td>
+									<td colspan="2" rowspan="2"> Monday-Friday 6am-10pm<br>
+										Saturday 8am - 8pm<br>
+										Sunday 8am - 5pm
+										</td>
+								</tr>
+								<tr>
+									<td> Pool </td>
+								</tr>
+								<tr> 
+									<td> Laundry </td>
+									<td> 24/7 </td>
+								</tr>
+							</tbody>
+							<tfoot class="tfoot">
+								<tr>
+									<td colspan="2"> Please do not allow people you do not know to use these facilities </td>
+									
+								</tr>
+							</tfoot>
+						</table>
+					</div>
+					<div class="location">
+						<h2> Location </h2>
+						<br>
+						<img src="img/location.png" alt="location map">
+					</div>
+					<div class="media">
+						<h2> Welcome Message </h2>
+						<br>
+						<audio controls>
+							 <source class="mp" src="mp3/apartment.mp3" type="audio/mpeg">
+						</audio>
+						<br>
+						<br>
+						<p><caption>Transcript: Hello. Welcome to our apartment. You'll really enjoy living here. The rooms are spacious and the apartment building amenities are fantastic. We look forward to hearing from you!</caption></p>
+					</div>
+				</div>
+					<div class="gallery">
+						<h2> Gallery </h2>
+					</div>
+					<br>
+					<div class="flex">
+						<div class="cell cell-1"><h2> Balcony </h2>
+						<br>
+						<img src="thumbnail/balcony_sm.jpg"></div>
+						<div class="cell cell-2"><h2> Bathroom </h2>
+						<br>
+						<img src="thumbnail/bathroom_sm.jpg"></div>
+						<div class="cell cell-3"><h2> Bedroom </h2>
+						<br>
+						<img src="thumbnail/bedroom_sm.jpg"></div>
+						<div class="cell cell-4"><h2> Dining Room </h2>
+						<br>
+						<img src="thumbnail/diningroom_sm.jpg"></div>
+						<div class="cell cell-5"><h2> Kitchen </h2>
+						<br>
+						<img src="thumbnail/kitchen_sm.jpg"></div>
+						<div class="cell cell-5"><h2> Living Room </h2>
+						<br>
+						<img src="thumbnail/livingroom_sm.jpg"></div>
+					</div>
+				
+			</main>
+			<footer>
+				<div class="footer">
+					<caption> For more information contact: <a href="https://mailto:apartment@example.com/">SandyAndLeslie@example.com</a></caption>
+					<p> © Sandy and Leslie 2020 </p>
+				</div>
+			</footer>
+	</body>
+</html>

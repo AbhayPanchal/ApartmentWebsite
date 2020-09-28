@@ -1,0 +1,27 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	padding: 10px;
+}
+.a h1{
+	color: skyblue;
+	text-align: center;
+}
+.a p{
+	text-align: center;
+}
+.img{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+.nav{
+	text-align: center;
+	padding: 8px;
+}
+.nav a{
+	padding: 4px;
+}
